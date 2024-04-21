@@ -1,0 +1,39 @@
+[project]
+requires-python = ">=3.10"
+
+[tool.poetry]
+name = "PAR_NP"
+version = "0.0.0"
+description = "Psuedo-Auto-Regressive Neural Process"
+authors = ["Dominic Hall"]
+readme = "README.md"
+packages = [{include = "PAR_NP", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+torch = "^2.2.2"
+neuralprocesses = "^0.2.5"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.3"
+pytest = "^7.4.0"
+mypy = "^1.5.1"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[tool.ruff.lint]
+extend-select = ["I", "N", "UP", "B", "PD002"]
+extend-ignore = ["E501", "E203", "E266"]
+unfixable = ["B"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" =  ["F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["PAR_NP"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
