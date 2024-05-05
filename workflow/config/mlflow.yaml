@@ -1,0 +1,10 @@
+enable_mlflow: true
+# Models can be quite big, so only log them if we're going to use them
+should_log_model: false
+# The prefix shouldn't change
+experiment_name_prefix: PAR-NP
+# The experiment name and date will be appended to the prefix. Date will be automatically generated if not provided
+experiment_name: test
+experiment_date:
+# Run name is optional
+run_name:
