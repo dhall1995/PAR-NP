@@ -8,3 +8,4 @@ experiment_name: test
 experiment_date:
 # Run name is optional
 run_name:
+tracking_uri: http://127.0.0.1:8080
